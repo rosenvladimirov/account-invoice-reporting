@@ -1,43 +1,39 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * base_comment_template
+#	* base_comment_template
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 11.0+e-20190711\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 11:59+0000\n"
-"PO-Revision-Date: 2017-05-16 11:59+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Greek (Greece) (https://www.transifex.com/oca/teams/23907/"
-"el_GR/)\n"
-"Language: el_GR\n"
+"POT-Creation-Date: 2019-08-01 07:09+0000\n"
+"PO-Revision-Date: 2019-08-01 07:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: base_comment_template
 #: selection:base.comment.template,position:0
 msgid "After lines"
-msgstr ""
+msgstr "After lines"
 
 #. module: base_comment_template
 #: model:ir.model,name:base_comment_template.model_base_comment_template
 msgid "Base comment template"
-msgstr ""
+msgstr "Base comment template"
 
 #. module: base_comment_template
 #: selection:base.comment.template,position:0
 msgid "Before lines"
-msgstr ""
+msgstr "Before lines"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_text
 msgid "Comment"
-msgstr ""
+msgstr "Σχόλιο"
 
 #. module: base_comment_template
 #: model:ir.actions.act_window,name:base_comment_template.action_base_comment_template
@@ -45,17 +41,22 @@ msgstr ""
 #: model:ir.ui.view,arch_db:base_comment_template.view_base_comment_template_search
 #: model:ir.ui.view,arch_db:base_comment_template.view_base_comment_template_tree
 msgid "Comment Templates"
-msgstr ""
+msgstr "Comment Templates"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_name
 msgid "Comment summary"
-msgstr ""
+msgstr "Comment summary"
+
+#. module: base_comment_template
+#: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_use
+msgid "Copy to note"
+msgstr "Copy to note"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_create_uid
 msgid "Created by"
-msgstr "Δημιουργήθηκε από "
+msgstr "Δημιουργήθηκε από"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_create_date
@@ -65,7 +66,7 @@ msgstr "Δημιουργήθηκε στις"
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Εμφάνιση Ονόματος"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_id
@@ -75,24 +76,35 @@ msgstr "Κωδικός"
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Τελευταία τροποποίηση στις"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_write_uid
 msgid "Last Updated by"
-msgstr "Τελευταία ενημέρωση από"
+msgstr "Τελευταία Ενημέρωση από"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_write_date
 msgid "Last Updated on"
-msgstr "Τελευταία ενημέρωση στις"
+msgstr "Τελευταία Ενημέρωση στις"
+
+#. module: base_comment_template
+#: selection:base.comment.template,position:0
+msgid "Narration"
+msgstr "Αφήγηση"
 
 #. module: base_comment_template
 #: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_position
 msgid "Position"
-msgstr ""
+msgstr "Θέση"
 
 #. module: base_comment_template
 #: model:ir.model.fields,help:base_comment_template.field_base_comment_template_position
 msgid "Position on document"
-msgstr ""
+msgstr "Position on document"
+
+#. module: base_comment_template
+#: model:ir.model.fields,field_description:base_comment_template.field_base_comment_template_short
+msgid "Short comment"
+msgstr "Short comment"
+

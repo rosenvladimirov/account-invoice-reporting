@@ -18,8 +18,14 @@
       <field name="arch" type="xml">
         <form string="Comment Templates">
           <group>
-            <field name="name"/>
-            <field name="position"/>
+            <group>
+              <field name="name"/>
+              <field name="position"/>
+            </group>
+            <group>
+              <field name="use"/>
+              <field name="short"/>
+            </group>
             <field name="text" colspan="4"/>
           </group>
         </form>

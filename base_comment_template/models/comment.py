@@ -11,17 +11,21 @@ class BaseCommentTemplate(models.Model):
 
     name = fields.Char('Comment summary', required=True)
     position = fields.Selection([('before_lines', 'Before lines'),
-                                 ('after_lines', 'After lines')],
+                                 ('after_lines', 'After lines'),
+                                 ('narration', 'Narration')
+                                 ],
                                 'Position',
                                 required=True,
                                 default='before_lines',
                                 help="Position on document")
     text = fields.Html('Comment', translate=True, required=True)
+    short = fields.Char('Short comment', translate=True)
+    use = fields.Boolean('Copy to note')
 
     @api.multi
-    def get_value(self, partner_id=False):
+    def get_value(self, partner_id=False, field_name='text'):
         self.ensure_one()
         lang = None
         if partner_id:
             lang = self.env['res.partner'].browse(partner_id).lang
-        return self.with_context({'lang': lang}).text
+        return getattr(self.with_context({'lang': lang}), field_name)
