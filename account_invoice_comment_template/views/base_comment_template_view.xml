@@ -2,7 +2,7 @@
 <odoo>
 
     <menuitem name="Document Comments"
-      id="menu_base_comment_template_invoice"
+      id="menu_base_comment_templates"
       action="base_comment_template.action_base_comment_template"
       parent="account.account_management_menu"/>
 

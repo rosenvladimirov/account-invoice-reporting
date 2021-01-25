@@ -12,7 +12,7 @@
             <group string="Top Comments">
               <field name="comment_template1_id"
                 string="Load a template"
-                domain="[('position','=','before_lines')]"
+                domain="[('position','=','before_lines'), ('company_id', '=', company_id)]"
                 context="{'default_position': 'before_lines'}"/>
               <field name="note1" nolabel="1" colspan="2"/>
             </group>
@@ -20,7 +20,7 @@
               <field name="comment_template2_id"
                 string="Load a template"
                 context="{'default_position': 'after_lines'}"
-                domain="[('position','=','after_lines')]"/>
+                domain="[('position','=','after_lines'), ('company_id', '=', company_id)]"/>
               <field name="note2" nolabel="1" colspan="2"/>
             </group>
           </page>

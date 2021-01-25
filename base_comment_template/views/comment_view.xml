@@ -6,8 +6,12 @@
       <field name="model">base.comment.template</field>
       <field name="arch" type="xml">
         <search string="Comment Templates">
-          <field name="name"/>
-          <field name="position"/>
+            <field name="name"/>
+            <field name="position"/>
+            <group string="Group By" name="groupby">
+                <filter name="company" string="Company"
+                    context="{'group_by': 'company_id'}"/>
+            </group>
         </search>
       </field>
     </record>
@@ -19,12 +23,13 @@
         <form string="Comment Templates">
           <group>
             <group>
-              <field name="name"/>
-              <field name="position"/>
+                <field name="name"/>
+                <field name="position"/>
+                <field name="company_id"/>
             </group>
             <group>
-              <field name="use"/>
-              <field name="short"/>
+                <field name="use"/>
+                <field name="short"/>
             </group>
             <field name="text" colspan="4"/>
           </group>
@@ -33,24 +38,30 @@
     </record>
 
     <record model="ir.ui.view" id="view_base_comment_template_tree">
-      <field name="name">account.comment.template.list</field>
-      <field name="model">base.comment.template</field>
-      <field name="priority" eval="6"/>
-      <field name="arch" type="xml">
+        <field name="name">account.comment.template.list</field>
+        <field name="model">base.comment.template</field>
+        <field name="priority" eval="6"/>
+        <field name="arch" type="xml">
         <tree string="Comment Templates">
-          <field name="name"/>
-          <field name="position"/>
+            <field name="name"/>
+            <field name="position"/>
+            <field name="company_id"/>
         </tree>
-      </field>
+        </field>
     </record>
 
     <record model="ir.actions.act_window" id="action_base_comment_template">
-      <field name="name">Comment Templates</field>
-      <field name="type">ir.actions.act_window</field>
-      <field name="res_model">base.comment.template</field>
-      <field name="view_type">form</field>
-      <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="view_base_comment_template_tree"/>
+        <field name="name">Comment Templates</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">base.comment.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_base_comment_template_tree"/>
     </record>
+
+    <menuitem name="Document Comments"
+        id="menu_base_comment_templates"
+        action="base_comment_template.action_base_comment_template"
+        parent="account.account_management_menu"/>
 
 </odoo>

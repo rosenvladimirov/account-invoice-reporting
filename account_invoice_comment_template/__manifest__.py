@@ -16,7 +16,7 @@
            "Odoo Community Association (OCA)",
  "license": "AGPL-3",
  'data': ['views/account_invoice_view.xml',
-          'views/base_comment_template_view.xml',
+          # 'views/base_comment_template_view.xml',
           'security/ir.model.access.csv',
           'views/report_invoice.xml',
           'views/res_partner_views.xml',
